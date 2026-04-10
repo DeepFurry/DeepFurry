@@ -1,0 +1,28 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../pages/**/*.html";
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-v16-latin-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-sans: "Nunito", "Segoe UI", sans-serif;
+}
+
+@layer base {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        min-height: 100vh;
+        background:
+            radial-gradient(circle at top, rgba(157, 209, 255, 0.14), transparent 34%),
+            linear-gradient(180deg, #14171a 0%, #111315 28%, #0f1113 100%);
+    }
+}

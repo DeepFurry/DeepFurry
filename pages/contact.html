@@ -1,144 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - DeepFurry</title>
+    <title>联系 - DeepFurry</title>
+    <meta name="description" content="DeepFurry 联系页面。">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pages.css">
 </head>
-<body>
-    <canvas id="particles-canvas"></canvas>
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="../index.html">DeepFurry</a>
+<body class="min-h-screen font-sans text-zinc-100 antialiased">
+    <div class="flex min-h-screen flex-col">
+        <nav class="sticky top-0 z-20 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+            <div class="mx-auto flex min-h-[76px] w-full max-w-6xl flex-wrap items-center justify-between gap-6 px-4 sm:px-6">
+                <a href="../index.html" class="text-lg font-semibold tracking-[0.04em] text-white no-underline">DeepFurry</a>
+                <ul class="flex flex-wrap items-center gap-2 text-sm text-zinc-400">
+                    <li><a href="../index.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">首页</a></li>
+                    <li><a href="./about.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">关于</a></li>
+                    <li><a href="./projects.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">项目</a></li>
+                    <li><a href="./blog.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">博客</a></li>
+                    <li><a href="./contact.html" class="inline-flex min-h-10 items-center rounded-full border border-white/10 bg-white/5 px-4 text-zinc-100 transition hover:border-sky-200/30 hover:text-white">联系</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="page-content">
-        <div class="container">
-            <header class="page-header">
-                <h1>Get In Touch</h1>
-                <p class="page-subtitle">Let's collaborate and build something amazing together</p>
-            </header>
+        <main class="flex-1 py-12 sm:py-18">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6">
+                <section class="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.32)] sm:p-10">
+                    <span class="inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-sky-100">Contact</span>
+                    <h1 class="mt-5 text-4xl leading-none font-semibold tracking-[-0.05em] text-white sm:text-6xl">联系</h1>
+                    <p class="mt-5 max-w-3xl text-lg text-zinc-300">暂时只保留最小联系入口，不展示未确认可用的邮箱或表单。</p>
 
-            <section class="contact-section">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h2>Connect With Us</h2>
-                        <p>Whether you have a project idea, want to contribute to our open source initiatives, or just want to say hello, we'd love to hear from you.</p>
-                        
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <h3>Email</h3>
-                                <p><a href="mailto:contact@deepfurry.com">contact@deepfurry.com</a></p>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <h3>GitHub</h3>
-                                <p><a href="https://github.com/DeepFurry" target="_blank">github.com/DeepFurry</a></p>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <h3>Response Time</h3>
-                                <p>We typically respond within 24-48 hours</p>
-                            </div>
-                        </div>
-
-                        <div class="collaboration-types">
-                            <h3>We're interested in:</h3>
-                            <ul>
-                                <li>Open source collaborations</li>
-                                <li>Technical consulting projects</li>
-                                <li>Speaking opportunities</li>
-                                <li>Community partnerships</li>
-                                <li>Mentorship programs</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-container">
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select a topic</option>
-                                    <option value="collaboration">Collaboration Opportunity</option>
-                                    <option value="consulting">Consulting Inquiry</option>
-                                    <option value="open-source">Open Source Contribution</option>
-                                    <option value="speaking">Speaking Engagement</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="6" placeholder="Tell us about your project, idea, or how we can help..." required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-            <section class="faq-section">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3>How can I contribute to your projects?</h3>
-                        <p>Check out our GitHub repositories for open issues, or reach out to us with your ideas. We welcome contributions of all kinds, from code to documentation.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Do you offer consulting services?</h3>
-                        <p>Yes, we provide technical consulting for various projects. Contact us with your requirements, and we'll discuss how we can help.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>Are you available for speaking engagements?</h3>
-                        <p>We love sharing our knowledge with the community. Reach out if you'd like us to speak at your event or conference.</p>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <h3>How do you handle project collaborations?</h3>
-                        <p>We evaluate each collaboration opportunity individually. Send us details about your project, timeline, and requirements.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 DeepFurry. Building the future, one line of code at a time.</p>
-            <div class="social-links">
-                <a href="https://github.com/DeepFurry" target="_blank">GitHub</a>
-                <a href="mailto:contact@deepfurry.com">Contact</a>
+                    <section class="mt-8 grid gap-5 rounded-[24px] border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+                        <h2 class="text-xl font-semibold text-white">目前可用的公开入口</h2>
+                        <p class="max-w-3xl text-base leading-8 text-zinc-400">
+                            如果你想关注这个组织的后续更新，当前最直接的方式是访问 GitHub 主页。
+                        </p>
+                        <a href="https://github.com/DeepFurry" target="_blank" rel="noreferrer" class="inline-flex min-h-12 w-fit items-center justify-center rounded-full border border-sky-200/20 bg-sky-200/10 px-5 text-sm font-medium text-sky-100 transition hover:bg-sky-200/15 sm:w-fit">github.com/DeepFurry</a>
+                    </section>
+                </section>
             </div>
-        </div>
-    </footer>
+        </main>
 
-    <script src="../js/particles.js"></script>
+        <footer class="border-t border-white/10 bg-black/20">
+            <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-5 text-sm text-zinc-400 sm:px-6 md:min-h-[72px] md:flex-row md:items-center md:justify-between">
+                <p>&copy; 2026 DeepFurry. 站点正在搭建中。</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://github.com/DeepFurry" target="_blank" rel="noreferrer" class="text-zinc-200 transition hover:text-sky-100">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

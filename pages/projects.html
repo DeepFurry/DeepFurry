@@ -1,164 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - DeepFurry</title>
+    <title>项目 - DeepFurry</title>
+    <meta name="description" content="DeepFurry 项目页面，目前暂无公开项目。">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pages.css">
 </head>
-<body>
-    <canvas id="particles-canvas"></canvas>
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="../index.html">DeepFurry</a>
+<body class="min-h-screen font-sans text-zinc-100 antialiased">
+    <div class="flex min-h-screen flex-col">
+        <nav class="sticky top-0 z-20 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+            <div class="mx-auto flex min-h-[76px] w-full max-w-6xl flex-wrap items-center justify-between gap-6 px-4 sm:px-6">
+                <a href="../index.html" class="text-lg font-semibold tracking-[0.04em] text-white no-underline">DeepFurry</a>
+                <ul class="flex flex-wrap items-center gap-2 text-sm text-zinc-400">
+                    <li><a href="../index.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">首页</a></li>
+                    <li><a href="./about.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">关于</a></li>
+                    <li><a href="./projects.html" class="inline-flex min-h-10 items-center rounded-full border border-white/10 bg-white/5 px-4 text-zinc-100 transition hover:border-sky-200/30 hover:text-white">项目</a></li>
+                    <li><a href="./blog.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">博客</a></li>
+                    <li><a href="./contact.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">联系</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="page-content">
-        <div class="container">
-            <header class="page-header">
-                <h1>Our Projects</h1>
-                <p class="page-subtitle">Innovative solutions that make a difference</p>
-            </header>
+        <main class="flex-1 py-12 sm:py-18">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6">
+                <section class="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.32)] sm:p-10">
+                    <span class="inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-sky-100">Projects</span>
+                    <h1 class="mt-5 text-4xl leading-none font-semibold tracking-[-0.05em] text-white sm:text-6xl">公开项目</h1>
+                    <p class="mt-5 max-w-3xl text-lg text-zinc-300">这个页面目前保持空白，只展示真实的公开状态。</p>
 
-            <section class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-header">
-                        <h3>AI-Powered Code Assistant</h3>
-                        <span class="project-status">Active Development</span>
-                    </div>
-                    <p class="project-description">An intelligent code completion and suggestion tool that learns from your coding patterns to provide contextual assistance and improve development efficiency.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">VS Code Extension</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-sm btn-primary">View Demo</a>
-                        <a href="#" class="btn btn-sm btn-secondary">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Distributed Task Scheduler</h3>
-                        <span class="project-status">Beta</span>
-                    </div>
-                    <p class="project-description">A high-performance, scalable task scheduling system designed for microservices architecture with real-time monitoring and auto-scaling capabilities.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Go</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-sm btn-primary">Documentation</a>
-                        <a href="#" class="btn btn-sm btn-secondary">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Real-time Analytics Dashboard</h3>
-                        <span class="project-status">Production</span>
-                    </div>
-                    <p class="project-description">A modern, responsive dashboard for real-time data visualization and analytics with customizable widgets and advanced filtering capabilities.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">WebSocket</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
-                        <a href="#" class="btn btn-sm btn-secondary">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Secure File Sharing Platform</h3>
-                        <span class="project-status">Planning</span>
-                    </div>
-                    <p class="project-description">End-to-end encrypted file sharing platform with advanced permission management, version control, and collaborative editing features.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">WebAssembly</span>
-                        <span class="tech-tag">Encryption</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-sm btn-primary">Roadmap</a>
-                        <a href="#" class="btn btn-sm btn-secondary">Contribute</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Machine Learning Toolkit</h3>
-                        <span class="project-status">Open Source</span>
-                    </div>
-                    <p class="project-description">A comprehensive toolkit for machine learning workflows, featuring automated model selection, hyperparameter tuning, and deployment pipelines.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">MLOps</span>
-                        <span class="tech-tag">API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-sm btn-primary">Documentation</a>
-                        <a href="#" class="btn btn-sm btn-secondary">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Developer Tools Suite</h3>
-                        <span class="project-status">Active</span>
-                    </div>
-                    <p class="project-description">A collection of developer productivity tools including code formatters, linters, and automated testing utilities for modern development workflows.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">CLI Tools</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="btn btn-sm btn-primary">Install</a>
-                        <a href="#" class="btn btn-sm btn-secondary">GitHub</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="contribute-section">
-                <h2>Want to Contribute?</h2>
-                <p>We welcome contributions from developers of all skill levels. Check out our open issues, submit pull requests, or propose new project ideas.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get Involved</a>
-                    <a href="#" class="btn btn-secondary">View All Repositories</a>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 DeepFurry. Building the future, one line of code at a time.</p>
-            <div class="social-links">
-                <a href="https://github.com/DeepFurry" target="_blank">GitHub</a>
-                <a href="mailto:contact@deepfurry.com">Contact</a>
+                    <section class="mt-8 rounded-[24px] border border-white/10 bg-white/[0.03] px-6 py-10 text-center sm:px-10">
+                        <h2 class="text-2xl font-semibold text-white sm:text-3xl">暂无公开项目</h2>
+                        <p class="mx-auto mt-4 max-w-3xl text-base leading-8 text-zinc-400">
+                            组织刚刚创建，当前还没有适合在这里展示的项目列表。等到有明确且公开的内容后，
+                            这里会再更新。
+                        </p>
+                    </section>
+                </section>
             </div>
-        </div>
-    </footer>
+        </main>
 
-    <script src="../js/particles.js"></script>
+        <footer class="border-t border-white/10 bg-black/20">
+            <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-5 text-sm text-zinc-400 sm:px-6 md:min-h-[72px] md:flex-row md:items-center md:justify-between">
+                <p>&copy; 2026 DeepFurry. 站点正在搭建中。</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://github.com/DeepFurry" target="_blank" rel="noreferrer" class="text-zinc-200 transition hover:text-sky-100">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

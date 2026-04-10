@@ -1,53 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepFurry - Modern Development Community</title>
+    <title>DeepFurry</title>
+    <meta name="description" content="DeepFurry 是一个刚刚开始搭建的 GitHub 组织。">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <canvas id="particles-canvas"></canvas>
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">DeepFurry</a>
+<body class="min-h-screen font-sans text-zinc-100 antialiased">
+    <div class="flex min-h-screen flex-col">
+        <nav class="sticky top-0 z-20 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+            <div class="mx-auto flex min-h-[76px] w-full max-w-6xl flex-wrap items-center justify-between gap-6 px-4 sm:px-6">
+                <a href="./index.html" class="text-lg font-semibold tracking-[0.04em] text-white no-underline">DeepFurry</a>
+                <ul class="flex flex-wrap items-center gap-2 text-sm text-zinc-400">
+                    <li><a href="./index.html" class="inline-flex min-h-10 items-center rounded-full border border-white/10 bg-white/5 px-4 text-zinc-100 transition hover:border-sky-200/30 hover:text-white">首页</a></li>
+                    <li><a href="./pages/about.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">关于</a></li>
+                    <li><a href="./pages/projects.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">项目</a></li>
+                    <li><a href="./pages/blog.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">博客</a></li>
+                    <li><a href="./pages/contact.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">联系</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/projects.html">Projects</a></li>
-                <li><a href="pages/blog.html">Blog</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">DeepFurry</h1>
-            <p class="hero-subtitle">Modern Development Community</p>
-            <p class="hero-description">
-                We are a passionate community of developers pushing the boundaries of modern technology. 
-                From cutting-edge web applications to innovative AI solutions, we create software that matters.
-            </p>
-            <div class="hero-buttons">
-                <a href="pages/projects.html" class="btn btn-primary">Explore Projects</a>
-                <a href="pages/about.html" class="btn btn-secondary">Learn More</a>
+        <main class="flex-1">
+            <section class="py-14 sm:py-20">
+                <div class="mx-auto grid w-full max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(18rem,0.8fr)]">
+                    <section class="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.32)] sm:p-10">
+                        <span class="inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-sky-100">GitHub Organization</span>
+                        <h1 class="mt-6 text-5xl leading-none font-semibold tracking-[-0.05em] text-white sm:text-7xl">DeepFurry</h1>
+                        <p class="mt-6 max-w-2xl text-lg text-zinc-300 sm:text-xl">一个刚刚开始的 GitHub 组织。</p>
+                        <p class="mt-5 max-w-3xl text-base leading-8 text-zinc-400">
+                            这里还在慢慢搭建中。公开内容、项目整理和后续说明会在准备好之后陆续放出，
+                            目前先保留一个简洁的入口页。
+                        </p>
+                        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                            <a href="https://github.com/DeepFurry" target="_blank" rel="noreferrer" class="inline-flex min-h-12 items-center justify-center rounded-full bg-sky-200 px-5 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-sky-100">查看 GitHub</a>
+                            <a href="./pages/about.html" class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] px-5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:border-sky-200/30 hover:bg-white/[0.05]">了解更多</a>
+                        </div>
+                    </section>
+
+                    <aside class="grid gap-4 rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.32)] sm:p-8">
+                        <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-sky-100">当前状态</span>
+                        <div class="rounded-3xl border border-white/5 bg-white/[0.05] p-5">
+                            <h2 class="text-base font-semibold text-white">正在搭建中</h2>
+                            <p class="mt-2 text-sm leading-7 text-zinc-400">站点和组织信息会按实际进展逐步更新。</p>
+                        </div>
+                        <div class="rounded-3xl border border-white/5 bg-white/[0.05] p-5">
+                            <h2 class="text-base font-semibold text-white">内容保持留白</h2>
+                            <p class="mt-2 text-sm leading-7 text-zinc-400">暂不展示尚未公开或尚未确定的实际内容。</p>
+                        </div>
+                        <div class="rounded-3xl border border-white/5 bg-white/[0.05] p-5">
+                            <h2 class="text-base font-semibold text-white">后续会逐步补充</h2>
+                            <p class="mt-2 text-sm leading-7 text-zinc-400">包括公开项目、文章记录和必要的联系方式。</p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-white/10 bg-black/20">
+            <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-5 text-sm text-zinc-400 sm:px-6 md:min-h-[72px] md:flex-row md:items-center md:justify-between">
+                <p>&copy; 2026 DeepFurry. 站点正在搭建中。</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://github.com/DeepFurry" target="_blank" rel="noreferrer" class="text-zinc-200 transition hover:text-sky-100">GitHub</a>
+                </div>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 DeepFurry. Building the future, one line of code at a time.</p>
-            <div class="social-links">
-                <a href="https://github.com/DeepFurry" target="_blank">GitHub</a>
-                <a href="mailto:contact@deepfurry.com">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./js/particles.js"></script>
+        </footer>
+    </div>
 </body>
 </html>

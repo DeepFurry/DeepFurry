@@ -1,86 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - DeepFurry</title>
+    <title>关于 - DeepFurry</title>
+    <meta name="description" content="关于 DeepFurry 的简要说明。">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pages.css">
 </head>
-<body>
-    <canvas id="particles-canvas"></canvas>
-    
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="../index.html">DeepFurry</a>
+<body class="min-h-screen font-sans text-zinc-100 antialiased">
+    <div class="flex min-h-screen flex-col">
+        <nav class="sticky top-0 z-20 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+            <div class="mx-auto flex min-h-[76px] w-full max-w-6xl flex-wrap items-center justify-between gap-6 px-4 sm:px-6">
+                <a href="../index.html" class="text-lg font-semibold tracking-[0.04em] text-white no-underline">DeepFurry</a>
+                <ul class="flex flex-wrap items-center gap-2 text-sm text-zinc-400">
+                    <li><a href="../index.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">首页</a></li>
+                    <li><a href="./about.html" class="inline-flex min-h-10 items-center rounded-full border border-white/10 bg-white/5 px-4 text-zinc-100 transition hover:border-sky-200/30 hover:text-white">关于</a></li>
+                    <li><a href="./projects.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">项目</a></li>
+                    <li><a href="./blog.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">博客</a></li>
+                    <li><a href="./contact.html" class="inline-flex min-h-10 items-center rounded-full border border-transparent px-4 transition hover:border-white/10 hover:bg-white/5 hover:text-white">联系</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="page-content">
-        <div class="container">
-            <header class="page-header">
-                <h1>About DeepFurry</h1>
-                <p class="page-subtitle">Building the future of technology, one innovation at a time</p>
-            </header>
+        <main class="flex-1 py-12 sm:py-18">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6">
+                <section class="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.32)] sm:p-10">
+                    <span class="inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-sky-100">About</span>
+                    <h1 class="mt-5 text-4xl leading-none font-semibold tracking-[-0.05em] text-white sm:text-6xl">关于 DeepFurry</h1>
+                    <p class="mt-5 max-w-3xl text-lg text-zinc-300">这是一个刚刚创建的组织主页，目前仅保留最基础的说明。</p>
 
-            <section class="content-section">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2>Our Mission</h2>
-                        <p>DeepFurry is a forward-thinking development community dedicated to pushing the boundaries of modern technology. We believe in creating software solutions that not only solve today's problems but anticipate tomorrow's challenges.</p>
+                    <div class="mt-8 grid gap-5 md:grid-cols-2">
+                        <article class="rounded-[22px] border border-white/10 bg-white/[0.025] p-6">
+                            <h2 class="text-xl font-semibold text-white">现在是什么</h2>
+                            <p class="mt-4 text-base leading-8 text-zinc-400">
+                                DeepFurry 目前处于起步阶段，公开页面以简洁和真实为主，不预设尚未发生的成果、
+                                方向或合作能力。
+                            </p>
+                        </article>
+                        <article class="rounded-[22px] border border-white/10 bg-white/[0.025] p-6">
+                            <h2 class="text-xl font-semibold text-white">现在不写什么</h2>
+                            <p class="mt-4 text-base leading-8 text-zinc-400">
+                                暂不展示团队介绍、技术栈清单、项目战绩、博客沉淀或任何容易造成误解的占位内容。
+                            </p>
+                        </article>
                     </div>
 
-                    <div class="content-card">
-                        <h2>What We Do</h2>
-                        <p>From cutting-edge web applications to innovative AI solutions, we specialize in developing robust, scalable, and user-centric software. Our expertise spans across multiple domains including machine learning, web development, and system architecture.</p>
-                    </div>
-
-                    <div class="content-card">
-                        <h2>Our Values</h2>
-                        <ul class="values-list">
-                            <li><strong>Innovation:</strong> We constantly explore new technologies and methodologies</li>
-                            <li><strong>Quality:</strong> Every line of code is crafted with precision and care</li>
-                            <li><strong>Collaboration:</strong> We believe in the power of community-driven development</li>
-                            <li><strong>Transparency:</strong> Open source and open communication are at our core</li>
-                        </ul>
-                    </div>
-
-                    <div class="content-card">
-                        <h2>Technology Stack</h2>
-                        <p>We work with modern technologies including Python, JavaScript, TypeScript, Go, Rust, and cutting-edge frameworks. Our infrastructure leverages cloud technologies, containerization, and CI/CD practices to ensure reliable and scalable deployments.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="team-section">
-                <h2>Join Our Community</h2>
-                <p>DeepFurry is more than just a development team – we're a community of passionate developers, designers, and innovators. Whether you're a seasoned professional or just starting your journey, there's a place for you in our community.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-                    <a href="projects.html" class="btn btn-secondary">View Our Work</a>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 DeepFurry. Building the future, one line of code at a time.</p>
-            <div class="social-links">
-                <a href="https://github.com/DeepFurry" target="_blank">GitHub</a>
-                <a href="mailto:contact@deepfurry.com">Contact</a>
+                    <section class="mt-6 rounded-[24px] border border-white/10 bg-white/[0.03] p-8 text-center">
+                        <h2 class="text-2xl font-semibold text-white sm:text-3xl">后续会在准备好之后逐步补充</h2>
+                        <p class="mx-auto mt-4 max-w-3xl text-base leading-8 text-zinc-400">
+                            当组织有了明确且公开的信息，这里会更新更完整的介绍。现在先保留一个克制、干净的起点。
+                        </p>
+                    </section>
+                </section>
             </div>
-        </div>
-    </footer>
+        </main>
 
-    <script src="../js/particles.js"></script>
+        <footer class="border-t border-white/10 bg-black/20">
+            <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-5 text-sm text-zinc-400 sm:px-6 md:min-h-[72px] md:flex-row md:items-center md:justify-between">
+                <p>&copy; 2026 DeepFurry. 站点正在搭建中。</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://github.com/DeepFurry" target="_blank" rel="noreferrer" class="text-zinc-200 transition hover:text-sky-100">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

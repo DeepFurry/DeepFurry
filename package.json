@@ -1,0 +1,17 @@
+{
+  "name": "deepfurry-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "DeepFurry organization site built with static HTML and Tailwind CSS.",
+  "packageManager": "npm@11.9.0",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./css/style.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./css/style.css --watch",
+    "build:site": "node ./scripts/build-site.mjs",
+    "build": "npm run build:css && npm run build:site"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "tailwindcss": "^4.2.0"
+  }
+}
